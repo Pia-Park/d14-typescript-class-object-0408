@@ -14,6 +14,15 @@ vehicle.drive()
 // vehicle.honk()
 
 class Car extends Vehicle{
+    // wheel:number
+    // color:string
+
+    constructor(public wheel:number, public color:string){
+        super()
+        // this.wheel = wheel
+        // this.color = color;
+    }
+
     //overriding
     public drive(): void{
         console.log('choo choo');        
@@ -26,7 +35,7 @@ class Car extends Vehicle{
 
 }
 
-const  car = new Car()
+const  car = new Car(4, 'red')
 car.startDrivingProcess()
 // car.honk()
 
