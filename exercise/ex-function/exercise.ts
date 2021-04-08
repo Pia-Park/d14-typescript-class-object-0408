@@ -52,8 +52,8 @@ const Exercise3 = () => {
     // • Add type annotations wherever possible
   
     function computeScore(word:string) {
-      const letters = word.toUpperCase().split('')
-      return letters.reduce((accum, curr) => (accum += getPointsFor(curr)), 0)
+      const letters:string[] = word.toUpperCase().split('')
+      return letters.reduce((accum:number, curr:string) => (accum += getPointsFor(curr)), 0)
     }
   
     function getPointsFor(letter:string) {
@@ -146,7 +146,7 @@ const Exercise3 = () => {
 
   
     function pushToCollection(item:(string|number), collection:string[]|number[]) {
-      collection.push(item)
+    //   collection.push(item)
       return collection
     }
   
