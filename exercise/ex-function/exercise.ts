@@ -67,8 +67,8 @@ const Exercise3 = () => {
         ['QZ', 10],
       ]
   
-      return lettersAndPoints.reduce((computedScore, pointsTuple) => {
-        const [letters, score] = pointsTuple
+      return lettersAndPoints.reduce((computedScore:number, pointsTuple:[string, number]) => {
+        const [letters, score]:[string, number] = pointsTuple
         if (letters.split('').find((ll) => ll === letter)) {
           return (computedScore += score)
         }
